@@ -1,0 +1,89 @@
+<app-displayheader>
+
+  <div style="padding:10px;width: 100%;">
+
+    <div class="container-fluid" style="width: 75%;">
+      <div class="header">
+        <span>Payment Selection</span>
+      </div>
+      <div class="well well-md well-style-creditcard">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optradio" checked>
+            <b>Credit Card</b>
+          </label>
+          <br>
+          <div class="sub-text">
+            Safe money transfer using your bank account.Visa, Maestro
+            <br> American Express
+          </div>
+        </div>
+
+        <form>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Card Number</label>
+                <input class="form-control" type="text">
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Name on Card</label>
+                <input class="form-control" type="text">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Expiry Date</label>
+                <input class="form-control" type="month">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>CVV</label>
+                <input class="form-control" type="text">
+              </div>
+            </div>
+          </div>
+
+        </form>
+
+
+      </div>
+      <div class="well well-md well-style-paypal">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optradio" checked>
+            <b>PayPal</b>
+          </label>
+          <br>
+          <div class="sub-text">
+            You will be redirected to Paypal website to complete your
+            <br> purchase securely.
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form-group">
+            <a [routerLink]="['/shipping']">
+              <span class="glyphicon glyphicon-arrow-left"></span> Back to Shipping Info</a>
+          </div>
+        </div>
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <input class="form-control btn btn-primary" type="button" value="Complete Order">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</app-displayheader>

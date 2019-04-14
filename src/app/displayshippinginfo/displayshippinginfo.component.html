@@ -1,0 +1,97 @@
+<app-displayheader>
+
+  <div style="padding:10px;width: 100%;">
+
+    <div class="container-fluid" style="width: 75%;">
+      <div class="header">
+        <span>Shipping Information</span>
+      </div>
+      <div class="well well-md well-style">
+        <div class="sub-text" style="display:inline-block">
+          Jamy Larson
+          <br> Unit 2 Green Mount Retail Park
+          <br> Halifax
+          <br> HX1 SQN
+          <br> Tel:0344 332 5931
+          <br>
+          <br>
+
+          <a>
+            <span class="edit-link">EDIT ADDRESS</span>
+          </a>
+          <span> </span>
+          <a>
+            <span class="add-link">ADD NEW</span>
+          </a>
+        </div>
+        <div class="img-style">
+          <img src="./assets/google@2x.png" style="width:60%">
+        </div>
+      </div>
+
+      <div class="header">
+        <span>Shipping Method</span>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="well well-md well-style-method">
+            <div class="radio">
+              <label>
+                <input type="radio" name="optradio" checked>
+                <b>Standard Delivery
+                  <span class="delivery-type">Free</span>
+                </b>
+              </label>
+              <br>
+              <div class="sub-text">
+                Estimated 14-20 Day Shipping
+                <br> Duties and taxes may be due
+                <br> upon delivery
+                <br>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="well well-md well-style-method">
+            <div class="radio">
+              <label>
+                <input type="radio" name="optradio">
+                <b>Fast delivery
+                  <span class="delivery-type">$8.00</span>
+                </b>
+              </label>
+              <br>
+              <div class="sub-text">
+                Estimated 2-5 Days Shipping
+                <br> Duties and taxes may be due
+                <br> upon delivery
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <a [routerLink]="['/']">
+              <span class="glyphicon glyphicon-arrow-left"></span> Back to Customer Info</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <input class="form-control btn btn-primary" type="button" (click)="movetoPayments()" value="Continue to Shipping">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</app-displayheader>

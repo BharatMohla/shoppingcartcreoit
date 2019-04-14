@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-9" style="padding-right:0px">
+            <nav class="navbar navbar-default">
+                <ul class="nav navbar-nav nav-list">
+                    <li class=".nav-item__link" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                        <a [routerLink]="['/']">01 Customer Info</a>
+                    </li>
+                    <li class=".nav-item__link" [routerLinkActive]="['active']">
+                        <a [routerLink]="['/shipping']">02 Selection Info</a>
+                    </li>
+                    <li class=".nav-item__link" [routerLinkActive]="['active']">
+                        <a [routerLink]="['/payments']">03 Payment Selection</a>
+                    </li>
+                </ul>
+
+            </nav>
+            <ng-content></ng-content>
+        </div>
+        <div class="col-md-3" style="background:lightblue; padding-right:0px">
+            <div style="padding:10px">
+                <div class="header">
+                    <h3>Shopping Cart</h3>
+                    <span class="hspan">{{productsinCart.length}} ITEMS</span>
+                </div>
+                <div style="padding-top:10px" class="header">
+                    <table>
+                        <tr class="table_content" style="padding-bottom:10px" *ngFor="let products of productsinCart;let i = index">
+                            <td style="padding-left:15px">
+                                <img src="./assets/T{{i+1}}.jpg" style="width:50px">
+                            </td>
+                            <td style="padding-left:15px">
+                                <div>{{products.p_variation+' '+products.p_name | uppercase}}</div>
+                                <div style="font-style:italic">Style #:{{products.p_style | uppercase}}</div>
+                                <div style="font-style:italic">Color:{{products.p_selected_color.name | uppercase}}</div>
+                                <div class="prodprice">{{products.c_currency+' '+products.p_price }}</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="header">
+                    <div>
+                        <h5>Have a Voucher?</h5>
+                    </div>
+                </div>
+                <div class="header">
+                    <div class="sub-header">
+                        <h5>Subtotal</h5>
+                        <span style="position: relative;left: 259px;top: -24px;">
+                            <h5>${{total}}</h5>
+                        </span>
+                    </div>
+                    <div class="sub-header">
+                        <h5>Shipping</h5>
+                        <span style="position: relative;left: 259px;top: -24px;">
+                            <h5>Free</h5>
+                        </span>
+                    </div>
+                </div>
+                <div class="header">
+                    <div style="display:inline-block">
+                        <h5>Total</h5>
+                    </div>
+                    <div style="display:inline-block;position: relative;left: 225px;">
+                        <h5>${{total}}</h5>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
